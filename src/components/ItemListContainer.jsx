@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ItemListContainer = (props) => {
+const ItemListContainer = (props) => {
   const saludo = props.saludo;
   return (
     <div>
