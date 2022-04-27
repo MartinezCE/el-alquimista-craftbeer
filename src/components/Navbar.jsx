@@ -5,7 +5,7 @@ const Navbar = () => {
     <>
       <nav class="menu">
         <label class="logo"> El Alquimista Craft Beer </label>
-        <CartWidget texto="CartWidget"> </CartWidget>
+        <CartWidget> </CartWidget>
         <ul class="menu_items" id="otroModo">
           <li>
             <a href="#inicio"> inicio </a>
