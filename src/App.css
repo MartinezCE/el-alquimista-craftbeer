@@ -1,15 +1,10 @@
 .menu {
-  background-color: rgba(0, 0, 0, 0.283);
-  position: fixed;
-  top: 0;
   height: 90px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-
-  z-index: 1;
 }
 
 .logo {
@@ -72,4 +67,10 @@ ul.show {
   border-width: 3px;
   border-style: solid;
   border-radius: 35px;
+}
+.content {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
 }

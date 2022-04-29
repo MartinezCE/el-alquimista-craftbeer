@@ -8,5 +8,5 @@
   { "id": 7, "title": "FRUTADA", "stock": 85, "price": 7082.04 },
   { "id": 8, "title": "CITRICA.", "stock": 70, "price": 7736.16 },
   { "id": 9, "title": "PILSEN", "stock": 93, "price": 324.53 },
-  { "id": 10, "title": "SESION", "stock": 16, "price": 7506.32 }
+  { "id": 10, "title": "SESSION", "stock": 16, "price": 7506.32 }
 ]
