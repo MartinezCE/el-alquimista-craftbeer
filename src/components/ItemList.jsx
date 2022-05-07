@@ -1,9 +1,11 @@
 import Item from "./Item";
-import react from "react";
-const ItemList = ({ productosArray }) => {
+
+const ItemList = ({ productos }) => {
+  console.log("item list", productos);
   return (
     <>
-      {productosArray.map((producto) => (
+      {/* <Item></Item> */}
+      {productos.map((producto) => (
         <Item producto={producto} />
       ))}
     </>

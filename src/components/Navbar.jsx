@@ -1,11 +1,15 @@
 import CartWidget from "./CartWidget";
+import logo from "../img/logo.png";
 
 const Navbar = () => {
   return (
     <>
+      <div className="logo-container">
+        <img className="logo-img" src={logo} alt="logo" />
+      </div>
       <nav className="menu">
-        <label className="logo"> El Alquimista Craft Beer </label>
-        <CartWidget> </CartWidget>
+        {/* <label className="logo"> El Alquimista Craft Beer </label>
+         */}
         <ul className="menu_items" id="otroModo">
           <li>
             <a href="#inicio"> inicio </a>
@@ -20,7 +24,9 @@ const Navbar = () => {
             <a href="#contacto"> contacto </a>
           </li>
         </ul>
+        <CartWidget />
       </nav>
+      <hr></hr>
     </>
   );
 };

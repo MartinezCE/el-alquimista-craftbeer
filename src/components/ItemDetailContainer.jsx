@@ -1,30 +1,29 @@
 import React from "react";
 import beer_data from "../API/beer_data";
 import { useState, useEffect } from "react";
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 
 function productoData() {
   return new Promise((resolve, reject) => {
-    resolve(beer_data);
+    resolve(beer_data[4]);
   }, 500);
 }
 
-const ItemListContainer = (props) => {
-  const [productos, setProductos] = useState({});
+const ItemDetailContainer = ({ titulo }) => {
+  const [producto, setProducto] = useState({});
 
   useEffect(() => {
     productoData().then((data) => {
-      setProductos(data);
+      setProducto(data);
     });
   }, []);
 
-  const saludo = props.saludo;
   return (
     <>
-      <h1>{saludo}</h1>
-      <ItemList productos={productos} />
+      <h1>{titulo}</h1>
+      <ItemDetail producto={producto} />
     </>
   );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;
