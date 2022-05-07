@@ -1,4 +1,4 @@
-import react from "react";
+//import react from "react";
 import porter from "../img/porter.jpeg";
 
 const ItemDetail = (props) => {

@@ -16,6 +16,15 @@ const Navbar = () => {
             <Link to="/"> inicio </Link>
           </li>
           <li>
+            <Link to="/type/blonde"> Rubia </Link>
+          </li>
+          <li>
+            <Link to="/type/red"> Roja </Link>
+          </li>
+          <li>
+            <Link to="/type/black"> Negra </Link>
+          </li>
+          <li>
             <Link to="/ofertas"> ofertas </Link>
           </li>
           <li>

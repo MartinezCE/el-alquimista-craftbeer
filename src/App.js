@@ -15,7 +15,11 @@ function App() {
           <Routes>
             <Route
               path="/ofertas"
-              element={<ItemListContainer saludo="SALUDOS" />}
+              element={<ItemListContainer saludo="OFERTAS" />}
+            />
+            <Route
+              path="/type/:typeid"
+              element={<ItemListContainer saludo="TIPO" />}
             />
             <Route
               path="/beer/:id"

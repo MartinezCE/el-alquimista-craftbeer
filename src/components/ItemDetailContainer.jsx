@@ -2,20 +2,25 @@ import React from "react";
 import beer_data from "../API/beer_data";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
-function productoData() {
+function productoData(idRequested) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(beer_data);
+      const productoRequested = beer_data.find(
+        (producto) => producto.id === Number(idRequested)
+      );
+      resolve(productoRequested);
     }, 500);
   });
 }
 
 const ItemDetailContainer = ({ titulo }) => {
+  const { id } = useParams();
   const [producto, setProducto] = useState([]);
 
   useEffect(() => {
-    productoData().then((data) => {
+    productoData(id).then((data) => {
       setProducto(data);
     });
   }, []);
