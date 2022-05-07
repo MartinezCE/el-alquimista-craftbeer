@@ -5,12 +5,14 @@ import ItemDetail from "./ItemDetail";
 
 function productoData() {
   return new Promise((resolve, reject) => {
-    resolve(beer_data[4]);
-  }, 500);
+    setTimeout(() => {
+      resolve(beer_data);
+    }, 500);
+  });
 }
 
 const ItemDetailContainer = ({ titulo }) => {
-  const [producto, setProducto] = useState({});
+  const [producto, setProducto] = useState([]);
 
   useEffect(() => {
     productoData().then((data) => {
