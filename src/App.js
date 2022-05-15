@@ -4,32 +4,36 @@ import ItemListContainer from "./components/ItemListContainer";
 import CartWidget from "./components/CartWidget";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { CartContexProvider } from "./store/CartContext";
+
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <div className="App">
-          <NavBar>
-            <CartWidget texto="CartWidget"></CartWidget>
-          </NavBar>
-          <Routes>
-            <Route
-              path="/ofertas"
-              element={<ItemListContainer saludo="OFERTAS" />}
-            />
-            <Route
-              path="/type/:typeid"
-              element={<ItemListContainer saludo="TIPO" />}
-            />
-            <Route
-              path="/beer/:id"
-              element={
-                <ItemDetailContainer titulo="Detalle de nuestra cerveza" />
-              }
-            />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <div className="App">
+        <CartContexProvider>
+          <BrowserRouter>
+            <NavBar>
+              <CartWidget texto="CartWidget"></CartWidget>
+            </NavBar>
+            <Routes>
+              <Route
+                path="/ofertas"
+                element={<ItemListContainer saludo="OFERTAS" />}
+              />
+              <Route
+                path="/type/:typeid"
+                element={<ItemListContainer saludo="TIPO" />}
+              />
+              <Route
+                path="/beer/:id"
+                element={
+                  <ItemDetailContainer titulo="Detalle de nuestra cerveza" />
+                }
+              />
+            </Routes>
+          </BrowserRouter>
+        </CartContexProvider>
+      </div>
     </>
   );
 }

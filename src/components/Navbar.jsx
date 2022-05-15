@@ -1,8 +1,11 @@
 import CartWidget from "./CartWidget";
 import logo from "../img/logo.png";
 import { Link } from "react-router-dom";
+import useCartContext from "../store/CartContext";
 
 const Navbar = () => {
+  const { contextFunction } = useCartContext();
+
   return (
     <>
       <div className="logo-container">
@@ -16,16 +19,18 @@ const Navbar = () => {
             <Link to="/"> inicio </Link>
           </li>
           <li>
-            <Link to="/type/blonde"> Rubia </Link>
-          </li>
-          <li>
-            <Link to="/type/red"> Roja </Link>
-          </li>
-          <li>
-            <Link to="/type/black"> Negra </Link>
-          </li>
-          <li>
             <Link to="/ofertas"> ofertas </Link>
+            <ul>
+              <li>
+                <Link to="/type/blonde"> Rubia </Link>
+              </li>
+              <li>
+                <Link to="/type/red"> Roja </Link>
+              </li>
+              <li>
+                <Link to="/type/black"> Negra </Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link to="#sobreNosotros"> Sobre Nosotros </Link>

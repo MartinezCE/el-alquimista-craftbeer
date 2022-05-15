@@ -1,8 +1,15 @@
 //import react from "react";
 import porter from "../img/porter.jpeg";
+import { ItemCount } from "./ItemCount";
+import { useState } from "react";
 
-const ItemDetail = (props) => {
-  const producto = props.producto;
+const ItemDetail = ({ producto }) => {
+  const [isInCart, setisInCart] = useState(false);
+
+  const onAdd = (contador) => {
+    console.log(`Agregaste al carrito ${contador}`);
+    setisInCart(true);
+  };
   return (
     <>
       <div className="detalle">
@@ -20,6 +27,11 @@ const ItemDetail = (props) => {
           </p>
           <h3 className="text-center">$ {producto.price}</h3>
           <hr />
+          {isInCart ? (
+            <button>Ver tu carrito</button>
+          ) : (
+            <ItemCount onAdd={onAdd} stock={producto.stock} inital={1} />
+          )}
         </div>
       </div>
     </>

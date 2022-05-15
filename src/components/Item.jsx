@@ -12,6 +12,8 @@ const Item = ({ producto }) => {
           a galley of type and scrambled it to make a type specimen book.
         </p>
         <h3 className="text-center">$ {producto.price}</h3>
+        <hr></hr>
+        <h3 className="text-center">Stock {producto.stock}</h3>
         <Link to={`/beer/${producto.id}`}>
           <button className="text-indigo-500 inline-flex items-center mt-3">
             ver mas
