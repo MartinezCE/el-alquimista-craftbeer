@@ -2,13 +2,16 @@
 import porter from "../img/porter.jpeg";
 import { ItemCount } from "./ItemCount";
 import { useState } from "react";
+import useCartContext from "../store/CartContext";
 
 const ItemDetail = ({ producto }) => {
   const [isInCart, setisInCart] = useState(false);
+  const { addToCart } = useCartContext();
 
   const onAdd = (contador) => {
-    console.log(`Agregaste al carrito ${contador}`);
+    console.log(`Agregaste al carrito ${contador} items`);
     setisInCart(true);
+    addToCart(producto, contador);
   };
   return (
     <>
