@@ -9,7 +9,9 @@ const Navbar = () => {
   return (
     <>
       <div className="logo-container">
-        <img className="logo-img" src={logo} alt="logo" />
+        <Link to="/">
+          <img className="logo-img" src={logo} alt="logo" />
+        </Link>
         <div className="titulo-container">
           <h1 className="titulo">El Alquimista</h1>
           <h2 className="subititulo">Craft Beer</h2>

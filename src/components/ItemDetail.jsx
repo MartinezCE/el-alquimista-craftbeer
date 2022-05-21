@@ -3,6 +3,7 @@ import porter from "../img/porter.jpeg";
 import { ItemCount } from "./ItemCount";
 import { useState } from "react";
 import useCartContext from "../store/CartContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ producto }) => {
   const [isInCart, setisInCart] = useState(false);
@@ -12,6 +13,10 @@ const ItemDetail = ({ producto }) => {
     setisInCart(true);
     addToCart(producto, contador);
   };
+
+  if (!producto) {
+    <h1> Cargando . . .</h1>;
+  }
   return (
     <>
       <div className="detalle">
@@ -30,9 +35,9 @@ const ItemDetail = ({ producto }) => {
           <h3 className="text-center">$ {producto.price}</h3>
           <hr />
           {isInCart ? (
-            <button>Ver tu carrito</button>
+            <Link to="/cart">Ver tu carrito</Link>
           ) : (
-            <ItemCount onAdd={onAdd} stock={producto.stock} inital={1} />
+            <ItemCount onAdd={onAdd} stock={producto.stock} initial={1} />
           )}
         </div>
       </div>

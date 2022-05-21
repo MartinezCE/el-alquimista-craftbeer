@@ -5,6 +5,7 @@ import CartWidget from "./components/CartWidget";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartContexProvider } from "./store/CartContext";
+import CartView from "../src/components/CartView";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                   <ItemDetailContainer titulo="Detalle de nuestra cerveza" />
                 }
               />
+              <Route path="/cart" element={<CartView />} />
             </Routes>
           </BrowserRouter>
         </CartContexProvider>
