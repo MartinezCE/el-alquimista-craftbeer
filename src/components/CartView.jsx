@@ -31,7 +31,7 @@ const CartView = () => {
             </div>
           );
         })}
-        ;<button onClick={clearCart}>Vaciar Carrito</button>
+        <button onClick={clearCart}>Vaciar Carrito</button>
       </div>
     );
   }

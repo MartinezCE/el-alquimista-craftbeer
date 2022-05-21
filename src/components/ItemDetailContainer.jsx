@@ -1,19 +1,8 @@
 import React from "react";
-import beer_data from "../API/beer_data";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-
-function productoData(idRequested) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const productoRequested = beer_data.find(
-        (producto) => producto.id === Number(idRequested)
-      );
-      resolve(productoRequested);
-    }, 500);
-  });
-}
+import { getItem as productoData } from "../API/Firebase/index";
 
 const ItemDetailContainer = ({ titulo }) => {
   const { id } = useParams();

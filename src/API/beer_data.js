@@ -1,4 +1,4 @@
-const beer_data = [
+/* const beer_data = [
   { id: 1, title: "IPA", stock: 7, price: 8524.24, type: "blonde" },
   { id: 2, title: "APA", stock: 40, price: 1356.19, type: "red" },
   { id: 3, title: "GOLDEN", stock: 71, price: 3815.02, type: "blonde" },
@@ -11,3 +11,4 @@ const beer_data = [
   { id: 10, title: "SESSION", stock: 16, price: 7506.32, type: "blonde" },
 ];
 export default beer_data;
+ */

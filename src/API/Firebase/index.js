@@ -7,6 +7,7 @@ import {
   where,
   colleccion,
   getDocs,
+  collection,
 } from "firebase/firestore/lite";
 
 const firebaseConfig = {
@@ -29,7 +30,39 @@ export default firestoreDB;
 
 export async function getAllItems() {
   //otenermos la referencia a la colleccion
-  const miColec = collectio(firebaseDB, "Beer");
+  const miColec = collection(firestoreDB, "Beer");
   const producSnap = await getDocs(miColec);
-  return producSnap.docs.map((doc) => doc.data());
+  return producSnap.docs.map((doc) => {
+    return {
+      ...doc.data(),
+      id: doc.id,
+    };
+  });
+}
+
+//filtrat items
+
+export async function getItemsByCategory(categoryId) {
+  const miColec = collection(firestoreDB, "Beer");
+  const queryBeer = query(miColec, where("type", "==", categoryId));
+  const producSnap = await getDocs(queryBeer);
+
+  return producSnap.docs.map((doc) => {
+    return {
+      ...doc.data(),
+      id: doc.id,
+    };
+  });
+}
+
+//obetener un solo item --- itemDitail
+
+export async function getItem(id) {
+  const miColec = collection(firestoreDB, "Beer");
+  const beerRef = doc(miColec, id);
+  const producSnap = await getDoc(beerRef);
+  return {
+    ...producSnap.data(),
+    id: producSnap.id,
+  };
 }
