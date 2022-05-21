@@ -10,6 +10,10 @@ const Navbar = () => {
     <>
       <div className="logo-container">
         <img className="logo-img" src={logo} alt="logo" />
+        <div className="titulo-container">
+          <h1 className="titulo">El Alquimista</h1>
+          <h2 className="subititulo">Craft Beer</h2>
+        </div>
       </div>
       <nav className="menu">
         {/* <label className="logo"> El Alquimista Craft Beer </label>
@@ -18,8 +22,10 @@ const Navbar = () => {
           <li>
             <Link to="/"> inicio </Link>
           </li>
+
           <li>
             <Link to="/ofertas"> ofertas </Link>
+
             <ul>
               <li>
                 <Link to="/type/blonde"> Rubia </Link>
@@ -32,6 +38,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+
           <li>
             <Link to="#sobreNosotros"> Sobre Nosotros </Link>
           </li>

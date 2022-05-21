@@ -17,7 +17,18 @@
 .detalle-img {
   width: 50%;
 }
-
+.ofertas-titulo {
+  text-align: center;
+}
+.ofertas-contenedor {
+  margin: 40px 40px 40px 40px;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 .logo {
   color: white;
   font-size: 35px;
@@ -31,11 +42,14 @@
 .logo-container {
   display: flex;
   align-content: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-
+.titulo-container {
+  margin-left: 20%;
+}
 .menu_items {
   display: flex;
   list-style: none;
@@ -47,7 +61,7 @@
   margin: 0 5px;
 }
 
-.menu_items li a {
+.menu_items li link {
   padding: 7px 13px;
   text-decoration: none;
   font-size: 18px;
@@ -62,7 +76,6 @@ li.active {
   background-color: #7de7ffc1;
   transition: 2s;
 }
-
 .btn_menu {
   margin-right: 30px;
   font-size: 25px;

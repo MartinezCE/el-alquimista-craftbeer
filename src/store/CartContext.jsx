@@ -30,20 +30,21 @@ export const CartContexProvider = ({ children }) => {
     setCart(cartFilter);
   };
   const clearCart = () => setCart([]);
-  const checkIsProductInCart = (id) => cart.some((valor) => valor === id);
+  const checkIsProductInCart = (id) => cart.some((valor) => valor.id === id);
   const quantityInCart = () => {
-    const cant = 0;
+    let cant = 0;
     for (let i = 0; i < cart.length; i++) {
-      cant++;
+      cant += cart[i].cant;
     }
     return cant;
   };
-  amountTotalForItem = () => {};
+  /*  amountTotalForItem = () => {}; */
   const amountTotal = () => {
     let amount = 0;
     for (let i = 0; i < cart.length; i++) {
-      amount += cart[i].price;
+      amount += cart[i].price * cart[i].cant;
     }
+    return amount;
   };
 
   const context = () => {

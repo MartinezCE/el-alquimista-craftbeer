@@ -9,7 +9,6 @@ const ItemDetail = ({ producto }) => {
   const { addToCart } = useCartContext();
 
   const onAdd = (contador) => {
-    console.log(`Agregaste al carrito ${contador} items`);
     setisInCart(true);
     addToCart(producto, contador);
   };

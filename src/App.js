@@ -17,6 +17,10 @@ function App() {
             </NavBar>
             <Routes>
               <Route
+                path="/"
+                element={<ItemListContainer saludo="OFERTAS" />}
+              />
+              <Route
                 path="/ofertas"
                 element={<ItemListContainer saludo="OFERTAS" />}
               />
