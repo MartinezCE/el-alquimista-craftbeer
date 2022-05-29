@@ -6,6 +6,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartContexProvider } from "./store/CartContext";
 import CartView from "../src/components/CartView";
+import Foother from "./components/Foother";
 
 function App() {
   return (
@@ -35,9 +36,18 @@ function App() {
                   <ItemDetailContainer titulo="Detalle de nuestra cerveza" />
                 }
               />
+              <Route
+                path="/sobreNosotros"
+                element={<ItemListContainer saludo="SOBRE NOSOTROS" />}
+              />
+              <Route
+                path="/contacto"
+                element={<ItemListContainer saludo="CONTACTO" />}
+              />
               <Route path="/cart" element={<CartView />} />
             </Routes>
-          </BrowserRouter>
+            <Foother />
+          </BrowserRouter>{" "}
         </CartContexProvider>
       </div>
     </>

@@ -29,7 +29,9 @@ export const CartContexProvider = ({ children }) => {
     });
     setCart(cartFilter);
   };
-  const clearCart = () => setCart([]);
+  const clearCart = () => {
+    setCart([]);
+  };
   const checkIsProductInCart = (id) => cart.some((valor) => valor.id === id);
   const quantityInCart = () => {
     let cant = 0;

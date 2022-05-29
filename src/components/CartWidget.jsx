@@ -5,12 +5,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-  const { quantityInCart, contador } = useCartContext();
+  const { quantityInCart } = useCartContext();
+
   return (
-    <div className=" carrito">
+    <div>
       <Link to="/cart">
-        {quantityInCart()}
-        <FontAwesomeIcon icon={faBeer} size="2x" color="white" />
+        <div className=" carrito">
+          {quantityInCart() > 0 && (
+            <div className=" countCarrito">
+              <div className="count">{quantityInCart()}</div>
+            </div>
+          )}
+          {quantityInCart() < 1 ? (
+            <FontAwesomeIcon icon={faBeer} size="2x" color="white" />
+          ) : (
+            <FontAwesomeIcon icon={faBeer} size="2x" color="#eab841" />
+          )}
+        </div>
       </Link>
     </div>
   );

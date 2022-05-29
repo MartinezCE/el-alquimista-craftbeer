@@ -5,9 +5,11 @@ import {
   getDoc,
   query,
   where,
-  colleccion,
   getDocs,
   collection,
+  Timestamp,
+  // setDoc,
+  addDoc,
 } from "firebase/firestore/lite";
 
 const firebaseConfig = {
@@ -65,4 +67,43 @@ export async function getItem(id) {
     ...producSnap.data(),
     id: producSnap.id,
   };
+}
+
+/* export async function dataToFirebase() {
+  const PRODUCTS = [
+    { title: "IPA", stock: 7, price: 8524, type: "blonde" },
+    { title: "APA", stock: 40, price: 1356, type: "red" },
+    { title: "GOLDEN", stock: 71, price: 3815, type: "blonde" },
+    { title: "RED", stock: 68, price: 6545, type: "red" },
+    { title: "PORTER", stock: 12, price: 55, type: "black" },
+    { title: "HONNEY", stock: 64, price: 5059, type: "blonde" },
+    { title: "FRUTADA", stock: 85, price: 7082, type: "blonde" },
+    { title: "CITRICA.", stock: 70, price: 7736, type: "blond" },
+    { title: "PILSEN", stock: 93, price: 324, type: "blonde" },
+    { title: "SESSION", stock: 16, price: 7506, type: "blonde" },
+  ];
+
+  const miColecccion = collection(firestoreDB, "Beer");
+
+  PRODUCTS.forEach((item) => {
+    const newDoc = doc(miColecccion);
+    setDoc(newDoc, item)
+      .then(() => {
+        console.log("Document written with id:", newDoc.id);
+      })
+      .catch((err) => {
+        console.error("Error adding document:", err);
+      });
+  });
+} */
+
+export async function createBuyOrder(orderData) {
+  const buyTimestamp = Timestamp.now();
+  const orderWithDate = {
+    ...orderData,
+    date: buyTimestamp,
+  };
+  const miColec = collection(firestoreDB, "buyOrders");
+  const orderDoc = await addDoc(miColec, orderWithDate);
+  alert(`Compra realizada con exito\nNumero de id ${orderDoc.id}`);
 }

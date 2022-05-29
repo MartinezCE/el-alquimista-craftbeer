@@ -13,14 +13,14 @@ const Navbar = () => {
           <img className="logo-img" src={logo} alt="logo" />
         </Link>
         <div className="titulo-container">
-          <h1 className="titulo">El Alquimista</h1>
-          <h2 className="subititulo">Craft Beer</h2>
+          <h1 className="titulo text-6xl">El Alquimista</h1>
+          <h2 className="subititulo text-4xl">Craft Beer</h2>
         </div>
       </div>
-      <nav className="menu">
+      <nav className="menu ">
         {/* <label className="logo"> El Alquimista Craft Beer </label>
          */}
-        <ul className="menu_items" id="otroModo">
+        <ul className="menu_items text-3xl" id="otroModo">
           <li>
             <Link to="/"> inicio </Link>
           </li>
@@ -42,10 +42,10 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link to="#sobreNosotros"> Sobre Nosotros </Link>
+            <Link to="/sobreNosotros"> Sobre Nosotros </Link>
           </li>
           <li>
-            <Link to="#contacto"> contacto </Link>
+            <Link to="/contacto"> contacto </Link>
           </li>
         </ul>
         <CartWidget />

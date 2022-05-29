@@ -16,7 +16,7 @@ const ItemDetailContainer = ({ titulo }) => {
 
   return (
     <>
-      <h1>{titulo}</h1>
+      <h1 className="text-center text-3xl text-orange-400 ">{titulo}</h1>
       <ItemDetail producto={producto} />
     </>
   );
