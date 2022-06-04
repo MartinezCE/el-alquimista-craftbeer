@@ -26,7 +26,7 @@ const ItemListContainer = (props) => {
   const saludo = props.saludo;
   return (
     <>
-      <h1 className="ofertas-titulo">{saludo}</h1>
+      <h1 className="ofertas-titulo text-3xl">{saludo}</h1>
       <div className="ofertas-contenedor">
         <ItemList productos={productos} />
       </div>

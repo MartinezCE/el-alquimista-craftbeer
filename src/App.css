@@ -1,13 +1,38 @@
 .textoCard {
-  color: #eab841 !important;
+  color: #ffffff !important;
+}
+.card {
+  background-color: rgba(210, 105, 30, 0.712);
+  margin: 20px;
 }
 .opcionesCompra {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+.carritoVacio {
+  background-color: brown;
+}
+
+.wrapperCompra {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  background-color: rgba(66, 19, 110, 0.308);
+}
+.btnBk1 {
+  margin-top: 20px !important;
+}
+.oferta_img {
+  width: 100%;
+  height: 320px;
+}
 .foother {
-  color: #eab841 !important;
+  color: #eab741 !important;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -100,11 +125,12 @@
   display: block;
   /*para que ocupe todo el espacio dentro del li */
 }
-
-.menu_items li:hover,
-li.active {
-  background-color: #7de7ffc1;
-  transition: 2s;
+.submenu {
+  position: absolute;
+  visibility: hidden;
+}
+.menu_items li:hover .submenu {
+  visibility: visible;
 }
 .btn_menu {
   margin-right: 30px;

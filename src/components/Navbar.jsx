@@ -1,11 +1,8 @@
 import CartWidget from "./CartWidget";
 import logo from "../img/logo.png";
 import { Link } from "react-router-dom";
-import useCartContext from "../store/CartContext";
-
+import React from "react";
 const Navbar = () => {
-  const { contextFunction } = useCartContext();
-
   return (
     <>
       <div className="logo-container">
@@ -18,34 +15,81 @@ const Navbar = () => {
         </div>
       </div>
       <nav className="menu ">
-        {/* <label className="logo"> El Alquimista Craft Beer </label>
-         */}
         <ul className="menu_items text-3xl" id="otroModo">
           <li>
-            <Link to="/"> inicio </Link>
+            <Link
+              to="/"
+              className="flex px-4py-2 rounded-md font-medium text-white
+  hover:bg-orange-400"
+            >
+              {" "}
+              inicio{" "}
+            </Link>
           </li>
 
           <li>
-            <Link to="/ofertas"> ofertas </Link>
+            <Link
+              to="/ofertas"
+              className="flex px-4py-2 rounded-md font-medium text-white
+  hover:bg-orange-400"
+            >
+              {" "}
+              ofertas{" "}
+            </Link>
 
-            <ul>
+            <ul className="submenu">
               <li>
-                <Link to="/type/blonde"> Rubia </Link>
+                <Link
+                  to="/type/blonde"
+                  className="flex px-4py-2 rounded-md font-medium text-white
+  hover:bg-orange-400"
+                >
+                  {" "}
+                  Rubia{" "}
+                </Link>
               </li>
               <li>
-                <Link to="/type/red"> Roja </Link>
+                <Link
+                  to="/type/red"
+                  className="flex px-4py-2 rounded-md font-medium text-white
+  hover:bg-orange-400"
+                >
+                  {" "}
+                  Roja{" "}
+                </Link>
               </li>
               <li>
-                <Link to="/type/black"> Negra </Link>
+                <Link
+                  to="/type/black"
+                  className="flex px-4py-2 rounded-md font-medium text-white
+  hover:bg-orange-400"
+                >
+                  {" "}
+                  Negra{" "}
+                </Link>
               </li>
             </ul>
           </li>
 
           <li>
-            <Link to="/sobreNosotros"> Sobre Nosotros </Link>
+            <Link
+              to="/sobreNosotros"
+              className="flex px-4py-2 rounded-md font-medium text-white
+  hover:bg-orange-400"
+            >
+              {" "}
+              Sobre Nosotros{" "}
+            </Link>
           </li>
           <li>
-            <Link to="/contacto"> contacto </Link>
+            <Link
+              to="/contacto"
+              className="flex px-4py-2 rounded-md font-medium text-white
+  hover:bg-orange-400"
+            >
+              {" "}
+              contacto{" "}
+            </Link>
           </li>
         </ul>
         <CartWidget />

@@ -13,13 +13,13 @@ import {
 } from "firebase/firestore/lite";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDAEJs4njyXkzUd1FW-ztdGX_4aIkQtjTY",
-  authDomain: "alquimista-373a5.firebaseapp.com",
-  projectId: "alquimista-373a5",
-  storageBucket: "alquimista-373a5.appspot.com",
-  messagingSenderId: "219669986293",
-  appId: "1:219669986293:web:b6cd0225a7c4bea689bebc",
-  measurementId: "G-7G0JLEYBTC",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MEASUREMENTID,
 };
 
 // Initialize Firebase

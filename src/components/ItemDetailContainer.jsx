@@ -12,7 +12,7 @@ const ItemDetailContainer = ({ titulo }) => {
     productoData(id).then((data) => {
       setProducto(data);
     });
-  }, []);
+  }, [id]);
 
   return (
     <>
