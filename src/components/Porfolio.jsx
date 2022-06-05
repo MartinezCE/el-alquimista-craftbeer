@@ -100,7 +100,7 @@ export default function Profile() {
                         de las cervezas mas ricas de buenos aires.
                       </p>
                       <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                        Si quieren saber mas de nosotros buscanos en las redes
+                        Si queres saber mas de nosotros, buscanos en las redes
                         sociales
                       </p>
                     </div>
