@@ -13,7 +13,12 @@
 .carritoVacio {
   background-color: brown;
 }
-
+.fondo {
+  background-color: rgba(245, 211, 17, 0.18) !important;
+}
+.fondo2 {
+  background-color: rgb(253, 247, 212) !important;
+}
 .wrapperCompra {
   text-align: center;
   display: flex;

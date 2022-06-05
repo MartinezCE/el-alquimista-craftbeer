@@ -4,7 +4,7 @@ const Form = () => {
   return (
     <div>
       <div class="flex items-center justify-center min-h-screen ">
-        <div class="w-full px-6 py-16 bg-white rounded-lg shadow-2xl lg:w-2/5">
+        <div class="fondo2 w-full px-6 py-16 bg-white rounded-lg shadow-2xl lg:w-2/5">
           <h2 class="mb-4 text-xl antialiased font-semibold text-center text-gray-800">
             Envie su consulta
           </h2>
