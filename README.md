@@ -10,7 +10,7 @@
 - Sweetalert2
 - React-router-dom
 
-El proyecto utiliza variables de entorno, por si desea ejecutarlo de forma local, no dude en solicitar las credenciale.
+Se utilizan variables de entorno, si desea ejecutarlo de forma local, no dude en solicitar las credenciale.
 
 ## instrucciones de ejecución
 
