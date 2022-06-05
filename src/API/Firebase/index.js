@@ -105,5 +105,6 @@ export async function createBuyOrder(orderData) {
   };
   const miColec = collection(firestoreDB, "buyOrders");
   const orderDoc = await addDoc(miColec, orderWithDate);
-  alert(`Compra realizada con exito\nNumero de id ${orderDoc.id}`);
+
+  return orderDoc.id;
 }

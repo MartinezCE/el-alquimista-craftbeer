@@ -12,7 +12,18 @@
 
 El proyecto utiliza variables de entorno, por si desea ejecutarlo de forma local, no dude en solicitar las credenciale.
 
-Puede visualizarse en el siguiente enlace https://elalquimista.vercel.app/
+## instrucciones de ejecución
+
+En el directorio del proyecto, puede ejecutar:
+
+**npm start**
+Ejecuta la aplicación en el modo de desarrollo.
+Abra http://localhost:3000 para verlo en el navegador.
+
+La página se volverá a cargar si realiza modificaciones.
+También verá cualquier error en la consola.
+
+Puede visualizar el proyecto final en el siguiente enlace https://elalquimista.vercel.app/
 
 <!-- <picture>
   <img alt="img del proyecto." src="">

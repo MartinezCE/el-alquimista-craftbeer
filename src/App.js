@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartContexProvider } from "./store/CartContext";
 import CartView from "../src/components/CartView";
 import Foother from "./components/Foother";
+import AboutUsView from "./components/AboutUsView";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -20,15 +22,15 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<ItemListContainer saludo="OFERTAS" />}
+                element={<ItemListContainer titulo="OFERTAS" />}
               />
               <Route
                 path="/ofertas"
-                element={<ItemListContainer saludo="OFERTAS" />}
+                element={<ItemListContainer titulo="OFERTAS" />}
               />
               <Route
                 path="/type/:typeid"
-                element={<ItemListContainer saludo="TIPO" />}
+                element={<ItemListContainer titulo="TIPO" />}
               />
               <Route
                 path="/beer/:id"
@@ -38,12 +40,9 @@ function App() {
               />
               <Route
                 path="/sobreNosotros"
-                element={<ItemListContainer saludo="SOBRE NOSOTROS" />}
+                element={<AboutUsView titulo="SOBRE NOSOTROS" />}
               />
-              <Route
-                path="/contacto"
-                element={<ItemListContainer saludo="CONTACTO" />}
-              />
+              <Route path="/contacto" element={<Contact titulo="CONTACTO" />} />
               <Route path="/cart" element={<CartView />} />
             </Routes>
             <Foother />

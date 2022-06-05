@@ -1,7 +1,6 @@
 import Item from "./Item";
 import React from "react";
 const ItemList = ({ productos }) => {
-  console.log("item list", productos);
   return (
     <>
       {productos.map((producto) => (

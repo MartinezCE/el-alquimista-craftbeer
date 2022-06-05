@@ -23,7 +23,7 @@ const Navbar = () => {
   hover:bg-orange-400"
             >
               {" "}
-              inicio{" "}
+              Ofertas{" "}
             </Link>
           </li>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
   hover:bg-orange-400"
             >
               {" "}
-              ofertas{" "}
+              Tipo{" "}
             </Link>
 
             <ul className="submenu">

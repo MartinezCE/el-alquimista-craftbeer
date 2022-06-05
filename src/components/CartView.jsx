@@ -2,6 +2,7 @@ import React from "react";
 import useCartContext from "../store/CartContext";
 import { Link } from "react-router-dom";
 import { createBuyOrder } from "../API/Firebase/index";
+import Swal from "sweetalert2";
 
 const CartView = () => {
   const { cart, clearCart, removeToCart, amountTotal } = useCartContext();
@@ -14,19 +15,32 @@ const CartView = () => {
       id: item.id,
     }));
 
-    console.log("ITEM FILTRADOS", itemsToBuy);
-    const buyOrder = {
+    const ordenDeCompra = {
       buyer: {
         name: "Cristian",
         phone: "1111111111",
         email: "eze.cmartinez@gmail.com",
       },
-      items: [...cart],
+      items: itemsToBuy,
       total: amountTotal(),
     };
-    createBuyOrder(buyOrder);
+
+    createBuyOrder(ordenDeCompra).then((id) => {
+      Swal.fire({
+        title: `Compra realizada con exito, numero de pedido ${id}`,
+        text: `Ante cualquier consulta comuníquese con el numero 151111111, \n en el horario de 9am a 18pm`,
+        showClass: {
+          popup: "animate__animated animate__fadeInDown",
+        },
+        hideClass: {
+          popup: "animate__animated animate__fadeOutUp",
+        },
+      });
+    });
+
     clearCart();
   }
+
   if (cart.length === 0) {
     return (
       <div style={{ textAlign: "center" }}>
@@ -59,6 +73,7 @@ const CartView = () => {
                 >
                   X
                 </button>
+                <hr></hr>
               </div>
             );
           })}

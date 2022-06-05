@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({ titulo }) => {
   const { typeid } = useParams();
   const [productos, setProductos] = useState([]);
 
@@ -23,10 +23,9 @@ const ItemListContainer = (props) => {
     }
   }, [typeid]);
 
-  const saludo = props.saludo;
   return (
     <>
-      <h1 className="ofertas-titulo text-3xl">{saludo}</h1>
+      <h1 className="ofertas-titulo text-4xl">{titulo}</h1>
       <div className="ofertas-contenedor">
         <ItemList productos={productos} />
       </div>
